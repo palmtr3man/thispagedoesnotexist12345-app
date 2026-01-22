@@ -1,0 +1,3 @@
+# Prevent redirects - serve index.html for all routes
+# The 200! forces this rule and prevents other redirects
+/*    /index.html   200

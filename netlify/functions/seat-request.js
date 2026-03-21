@@ -37,12 +37,18 @@ exports.handler = async (event) => {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        to: [{ email: email }],
+        personalizations: [
+          {
+            to: [{ email: email }],
+            dynamic_template_data: {
+              first_name: first_name,
+              subject: "Your seat request is in \u2014 FL 032126 \u2708\uFE0F"
+            }
+          }
+        ],
         from: { email: SENDGRID_FROM_EMAIL },
-        template_id: SENDGRID_ACK_TEMPLATE_ID,
-        dynamic_template_data: {
-          first_name: first_name
-        }
+        subject: "Your seat request is in \u2014 FL 032126 \u2708\uFE0F",
+        template_id: SENDGRID_ACK_TEMPLATE_ID
       })
     });
 

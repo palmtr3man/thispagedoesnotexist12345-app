@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --canvas: #010102;
+    --surface-1: #0f1011;
+    --surface-2: #141516;
+    --surface-3: #18191a;
+    --hairline: #23252a;
+    --primary: #ff9900;
+    --primary-foreground: #010102;
+    --accent: #ffcc00;
+  }
+
+  body {
+    @apply bg-canvas text-slate-200 antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-surface-1/50 border border-hairline backdrop-blur-xl rounded-xl;
+  }
+  
+  .glass-panel-elevated {
+    @apply bg-surface-2/50 border border-hairline backdrop-blur-xl rounded-xl;
+  }
+}
+
+/* Domain Header Responsive Fix */
+/* Target the site title in Home.tsx and potential Beehiiv wrapper/iframe overrides */
+header a.font-mono,
+#beehiiv-form-wrapper h1,
+.beehiiv-embed-header,
+[class*="beehiiv"] h1 {
+  font-size: clamp(1.1rem, 5vw, 1.3rem) !important;
+  letter-spacing: -0.02em !important;
+  white-space: nowrap !important;
+}
+
+@media (max-width: 640px) {
+  header a.font-mono,
+  #beehiiv-form-wrapper h1,
+  .beehiiv-embed-header,
+  [class*="beehiiv"] h1 {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: block !important;
+  }
+}
+
+/* Specific target for the landing page header link in Home.tsx */
+header .flex.items-center.gap-2.text-cyan-400 {
+  max-width: 100% !important;
+}

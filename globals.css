@@ -16,6 +16,7 @@
 
   body {
     @apply bg-canvas text-slate-200 antialiased;
+
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 }
@@ -50,10 +51,11 @@ header a.font-mono,
     overflow: hidden !important;
     text-overflow: ellipsis !important;
     display: block !important;
+    text-align: left !important;
   }
 }
 
 /* Specific target for the landing page header link in Home.tsx */
-header .flex.items-center.gap-2.text-cyan-400 {
+header [data-style-hook="landing-header"] {
   max-width: 100% !important;
 }

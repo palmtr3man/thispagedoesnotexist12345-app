@@ -2,5 +2,10 @@
 https://www.thispagedoesnotexist12345.us/*  https://newsletter.thispagedoesnotexist12345.us/:splat  301!
 https://thispagedoesnotexist12345.us/*      https://newsletter.thispagedoesnotexist12345.us/:splat  301!
 
+# Explicit SPA routes for passenger portals (Juneteenth dispatch)
+/passport/:id                                /index.html                                            200
+/mission/:id/start                           /index.html                                            200
+/dashboard/:id                               /index.html                                            200
+
 # Serve index.html for all other routes (SPA fallback)
-/*    /index.html   200
+/*                                           /index.html                                            200

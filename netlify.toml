@@ -1,5 +1,5 @@
 [build]
-  publish = "."
+  publish = "public"
   functions = "netlify/functions"
 
 [build.environment]
@@ -13,11 +13,6 @@
   for = "/*.html"
   [headers.values]
     Content-Type = "text/html; charset=UTF-8"
-
-[[headers]]
-  for = "/*.js"
-  [headers.values]
-    Content-Type = "application/javascript; charset=UTF-8"
 
 [[headers]]
   for = "/api/*"

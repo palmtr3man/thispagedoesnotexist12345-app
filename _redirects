@@ -1,3 +1,7 @@
+# Redirect legacy corporate-games.tech to thispagedoesnotexist12345.com
+https://corporate-games.tech/* https://www.thispagedoesnotexist12345.com/:splat 301!
+https://www.corporate-games.tech/* https://www.thispagedoesnotexist12345.com/:splat 301!
+
 # Redirect www and apex to newsletter subdomain
 https://www.thispagedoesnotexist12345.us/*  https://newsletter.thispagedoesnotexist12345.us/:splat  301!
 https://thispagedoesnotexist12345.us/*      https://newsletter.thispagedoesnotexist12345.us/:splat  301!

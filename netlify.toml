@@ -27,12 +27,6 @@
     Access-Control-Allow-Headers = "Content-Type, Authorization"
 
 [[redirects]]
-  from = "https://thispagedoesnotexist12345.com/*"
-  to = "https://www.thispagedoesnotexist12345.com/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
   from = "/api/trpc/*"
   to = "/.netlify/functions/trpc/:splat"
   status = 200

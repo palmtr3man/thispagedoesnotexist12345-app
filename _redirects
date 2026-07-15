@@ -1,6 +1,3 @@
-# Redirect legacy corporate-games.tech to thispagedoesnotexist12345.com
-# REMOVED: conflicting with Netlify primary domain settings and causing ERR_TOO_MANY_REDIRECTS
-
 # Redirect www and apex to newsletter subdomain
 https://www.thispagedoesnotexist12345.us/*  https://newsletter.thispagedoesnotexist12345.us/:splat  301!
 https://thispagedoesnotexist12345.us/*      https://newsletter.thispagedoesnotexist12345.us/:splat  301!

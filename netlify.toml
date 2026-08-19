@@ -100,6 +100,18 @@ functions = "netlify/functions"
   force = true
 
 [[redirects]]
+  from = "/studio"
+  to = "/Studio/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/studio/*"
+  to = "/Studio/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/Studio"
   to = "/Studio/"
   status = 200
@@ -126,6 +138,30 @@ functions = "netlify/functions"
   from = "/dashboard"
   to = "/?status=boarded"
   status = 200
+  force = true
+
+[[redirects]]
+  from = "/JDLibrary"
+  to = "/JDLibrary/"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/JDLibrary/*"
+  to = "/JDLibrary/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/jdlibrary"
+  to = "/JDLibrary/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/jdlibrary/*"
+  to = "/JDLibrary/:splat"
+  status = 301
   force = true
 
 [[redirects]]

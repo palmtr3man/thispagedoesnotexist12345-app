@@ -26,11 +26,6 @@ functions = "netlify/functions"
   status = 200
 
 [[redirects]]
-  from = "/api/seat-status"
-  to = "/.netlify/functions/seat-status"
-  status = 200
-
-[[redirects]]
   from = "/api/seat-request"
   to = "/.netlify/functions/seat-request"
   status = 200
